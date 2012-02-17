@@ -21,3 +21,9 @@ Edit *app/models/post.rb*
 ### Continue setup…
 
     bundle exec rake db:seed
+
+Edit *app/views/posts/_form.html.erb* add nested comments fields in the post form
+
+    <%= f.fields_for :comments do |comment_form| %>
+      <%= comment_form.text_area :content  %>
+    <% end %>
