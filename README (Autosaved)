@@ -1,4 +1,0 @@
-# Demo of accepts_nested_attributes_for
-
-    rails new accepts_nested_attributes_for-demo
-    
