@@ -2,6 +2,8 @@
 
 **Rails 3.2.1**
 
+## Setup
+
     rails new accepts_nested_attributes_for-demo
     cd accepts_nested_attributes_for-demo
     bundle exec rails g scaffold Post title:string content:text
@@ -9,9 +11,13 @@
     bundle exec rake db:create db:migrate
 
 
-*app/models/post.rb*
+Edit *app/models/post.rb*
+
     class Post < ActiveRecord::Base
       has_many :comments, :dependent => :destroy
       accepts_nested_attributes_for :comments, allow_destroy: true
     end
 
+### Continue setup…
+
+    bundle exec rake db:seed

@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+post = Post.create! title: 'First post', content: "Playing with accepts_nested_attributes_for"
+post.comments << Comment.create!(content: "Update me please!")
+post.comments << Comment.create!(content: "Yeah, me too please!")
+post.comments << Comment.create!(content: "If you don't mind, I'd like to also.")
