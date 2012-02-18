@@ -27,3 +27,10 @@ Edit *app/views/posts/_form.html.erb* add nested comments fields in the post for
     <%= f.fields_for :comments do |comment_form| %>
       <%= comment_form.text_area :content  %>
     <% end %>
+
+### Start server
+
+    bundle exec rails server
+    open http://localhost:3000/posts
+
+Then edit the post comments and submit the form.
