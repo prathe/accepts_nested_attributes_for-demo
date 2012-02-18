@@ -6,7 +6,7 @@
 
     rails new accepts_nested_attributes_for-demo
     cd accepts_nested_attributes_for-demo
-    bundle exec rails g scaffold Post title:string content:text
+    bundle exec rails generate scaffold Post title:string content:text
     bundle exec rails generate model Comment content:text post:references
     bundle exec rake db:create db:migrate
 
